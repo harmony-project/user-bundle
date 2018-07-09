@@ -1,0 +1,36 @@
+{
+  "name": "harmony-project/user-bundle",
+  "type": "symfony-bundle",
+  "description": "Adds basic user authentication and management to the full-stack Symfony framework",
+  "keywords": ["user", "user management", "symfony"],
+  "homepage": "http://harmony-project.io",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Tim Goudriaan",
+      "homepage": "http://codedmonkey.com"
+    }
+  ],
+  "support": {
+    "docs": "http://harmony-project.io/docs/user-bundle",
+    "issues": "https://github.com/harmony-project/user-bundle/issues",
+    "source": "https://github.com/harmony-project/user-bundle"
+  },
+  "require": {
+    "php": "^7.1",
+    "symfony/framework-bundle": "^3.4|^4.0",
+    "symfony/security-bundle": "^3.4|^4.0",
+    "symfony/twig-bundle": "^3.4|^4.0"
+  },
+  "require-dev": {},
+  "autoload": {
+    "psr-4": {
+      "Harmony\\Bundle\\UserBundle\\": "source/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.1.x-dev"
+    }
+  }
+}

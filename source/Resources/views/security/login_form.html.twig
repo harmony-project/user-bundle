@@ -1,0 +1,27 @@
+{% trans_default_domain 'harmony_user' %}
+
+{% if error %}
+<p>
+  {{ error.messageKey|trans(error.messageData, 'security') }}
+</p>
+{% endif %}
+
+<form action="{{ path('harmony_user_login') }}" method="post">
+  <div>
+    <label for="username">{{ 'label.username'|trans }}</label>
+    <input type="text" id="username" name="_username" value="{{ last_username }}" required="required">
+  </div>
+  <div>
+    <label for="password">{{ 'label.password'|trans }}</label>
+    <input type="password" id="password" name="_password" required="required">
+  </div>
+
+  {% if app.request.get('redirect_to') %}
+  <input type="hidden" name="_target_path" value="{{ app.request.get('redirect_to') }}">
+  {% endif %}
+  {% if csrf_token %}
+  <input type="hidden" name="_csrf_token" value="{{ csrf_token }}">
+  {% endif %}
+
+  <button type="submit">{{ 'action.sign_in'|trans }}</button>
+</form>
