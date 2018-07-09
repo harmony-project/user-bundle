@@ -1,0 +1,9 @@
+{% extends ['user_base.html.twig', '@HarmonyUser/base.html.twig'] %}
+
+{% block harmony_user_content %}
+<div class="ui centered grid">
+  <div class="column" style="max-width: 400px;">
+    {% include '@HarmonyUser/security/login_form.html.twig' %}
+  </div>
+</div>
+{% endblock %}

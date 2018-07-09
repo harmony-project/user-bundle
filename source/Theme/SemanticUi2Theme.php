@@ -8,15 +8,17 @@
  * file that was distributed with this source code.
  */
 
-namespace Harmony\Bundle\UserBundle;
-
-use Symfony\Component\HttpKernel\Bundle\Bundle;
+namespace Harmony\Bundle\UserBundle\Theme;
 
 /**
- * Bundle definition
+ * Semantic UI 2 theme for HarmonyUserBundle
  *
  * @author Tim Goudriaan <tim@harmony-project.io>
  */
-class HarmonyUserBundle extends Bundle
+class SemanticUi2Theme implements ThemeInterface
 {
+    public function getTemplatePath(): string
+    {
+        return dirname(__DIR__) . '/Resources/themes/semantic_2';
+    }
 }

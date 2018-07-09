@@ -8,15 +8,17 @@
  * file that was distributed with this source code.
  */
 
-namespace Harmony\Bundle\UserBundle;
-
-use Symfony\Component\HttpKernel\Bundle\Bundle;
+namespace Harmony\Bundle\UserBundle\Theme;
 
 /**
- * Bundle definition
+ * Interface for theme definitions
  *
  * @author Tim Goudriaan <tim@harmony-project.io>
  */
-class HarmonyUserBundle extends Bundle
+interface ThemeInterface
 {
+    /**
+     * Returns the location of the theme templates
+     */
+    public function getTemplatePath(): string;
 }
